@@ -15,14 +15,14 @@ Getting Started
 ===============
 
 1. Git clone the repo:
-```
+    ```
     git clone https://github.com/chrislondon/presentation-refactoring.git
-```
+    ```
 2. Install dependencies via composer:
-```
+    ```
     ./bin/composer.phar install
-```
+    ```
 3. Run tests
-```
+    ```
     ./bin/phpunit
-```
+    ```
