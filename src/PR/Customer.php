@@ -42,27 +42,44 @@ class Customer {
 	 */
 	public function statement()
 	{
-		$totalAmount = 0;
-		$frequentRenterPoints = 0;
-
-		$rentals = $this->rentals;
-
 		$result = "Rental Record for " . $this->getName() . "\n";
 
-		foreach ($rentals as $each) {
-			$thisAmount = $each->getCharge();
-
-			// add frequent renter points
-			$frequentRenterPoints += $each->getFrequentRenterPoints();
-
-			//show figures for this rental
-			$result .= "\t" . $each->getMovie()->getTitle() . "\t" . $thisAmount . "\n";
-
-			$totalAmount += $thisAmount;
+		foreach ($this->rentals as $each) {
+			$result .= "\t" . $each->getMovie()->getTitle() . "\t" . $each->getCharge() . "\n";
 		}
 
-		$result .= 'Amount owed is ' . $totalAmount . "\n";
-		$result .= 'You earned ' . $frequentRenterPoints . " frequent renter points\n";
+		$result .= 'Amount owed is ' . $this->getTotalCharge() . "\n";
+		$result .= 'You earned ' . $this->getTotalFrequentRenterPoints() . " frequent renter points\n";
+
+		return $result;
+	}
+
+	/**
+	 * @return float|int
+	 */
+	public function getTotalCharge()
+	{
+		$result = 0;
+
+		foreach ($this->rentals as $rental)
+		{
+			$result += $rental->getCharge();
+		}
+
+		return $result;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getTotalFrequentRenterPoints()
+	{
+		$result = 0;
+
+		foreach ($this->rentals as $rental)
+		{
+			$result += $rental->getFrequentRenterPoints();
+		}
 
 		return $result;
 	}
