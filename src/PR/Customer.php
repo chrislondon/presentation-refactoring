@@ -79,7 +79,6 @@ class Customer {
 				$frequentRenterPoints++;
 
 			//show figures for this rental
-
 			$result .= "\t" . $each->getMovie()->getTitle() . "\t" . $thisAmount . "\n";
 
 			$totalAmount += $thisAmount;
