@@ -37,6 +37,9 @@ class Customer {
 		return $this->name;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function statement()
 	{
 		$totalAmount = 0;
