@@ -22,12 +22,12 @@ Getting Started
 2. Install dependencies via composer:
 
     ```
-    ./bin/composer.phar install
+    php bin/composer.phar install
     ```
 3. Run tests
 
     ```
-    ./bin/phpunit
+    bin/phpunit
     ```
 
 If you have successfully set up your environment you should see something similar to the the following:
