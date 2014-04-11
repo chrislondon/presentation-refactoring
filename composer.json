@@ -1,0 +1,30 @@
+{
+	"name": "Hands-on Refactoring in PHP",
+	"description": "Repository for conference presentation",
+	"version": "v1.0.0",
+	"type": "web application",
+	"time": "2014-04-10 11:01",
+	"homepage": "http://www.chrislondon.co",
+	"authors": [
+		{
+			"name": "Chris London",
+			"email": "me@chrislondon.co"
+		}
+	],
+	"require":{
+		"php":">=5.3.26"
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"require-dev":{
+		"phpunit/phpunit": "4.0.*"
+	},
+	"config":{
+		"bin-dir":"bin/"
+	},
+	"autoload":{
+		"psr-0":{
+			"PR": "src/"
+		}
+	}
+}
