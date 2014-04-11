@@ -19,19 +19,19 @@ class CustomerTest extends PHPUnit_Framework_TestCase
 	{
 		$name = 'Jim Bob';
 
-		$movieSpeed  = new Movie('Speed', Movie::REGULAR);
-		$movieSpeed2 = new Movie('Speed 2', Movie::REGULAR);
-		$movieGravity  = new Movie('Gravity', Movie::NEW_RELEASE);
-		$movieRonin    = new Movie('Ronin', Movie::NEW_RELEASE);
-		$movieDumbo    = new Movie('Dumbo', Movie::CHILDRENS);
-		$movieMulan    = new Movie('Mulan', Movie::CHILDRENS);
+		$movieSpeed   = new Movie('Speed', Movie::REGULAR);
+		$movieSpeed2  = new Movie('Speed 2', Movie::REGULAR);
+		$movieGravity = new Movie('Gravity', Movie::NEW_RELEASE);
+		$movieRonin   = new Movie('Ronin', Movie::NEW_RELEASE);
+		$movieDumbo   = new Movie('Dumbo', Movie::CHILDRENS);
+		$movieMulan   = new Movie('Mulan', Movie::CHILDRENS);
 
-		$rentalSpeed  = new \PR\Rental($movieSpeed, 1);
-		$rentalSpeed2 = new \PR\Rental($movieSpeed2, 5);
-		$rentalGravity  = new \PR\Rental($movieGravity, 1);
-		$rentalRonin    = new \PR\Rental($movieRonin, 3);
-		$rentalDumbo    = new \PR\Rental($movieDumbo, 2);
-		$rentalMulan    = new \PR\Rental($movieMulan, 4);
+		$rentalSpeed   = new Rental($movieSpeed, 1);
+		$rentalSpeed2  = new Rental($movieSpeed2, 5);
+		$rentalGravity = new Rental($movieGravity, 1);
+		$rentalRonin   = new Rental($movieRonin, 3);
+		$rentalDumbo   = new Rental($movieDumbo, 2);
+		$rentalMulan   = new Rental($movieMulan, 4);
 
 		$customer = new Customer($name);
 
