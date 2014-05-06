@@ -55,6 +55,25 @@ class Customer {
 	}
 
 	/**
+	 * @return string
+	 */
+	public function htmlStatement()
+	{
+		$result = "<h1>Rental Record for <strong>" . $this->getName() . "</strong></h1>";
+
+		$result .= "<table>";
+		foreach ($this->rentals as $each) {
+			$result .= "<tr><td>" . $each->getMovie()->getTitle() . "</td><td>" . $each->getCharge() . "</td></tr>";
+		}
+		$result .= "</table>";
+
+		$result .= '<p>Amount owed is <strong>' . $this->getTotalCharge() . "</strong></p>";
+		$result .= '<p>You earned <strong>' . $this->getTotalFrequentRenterPoints() . "</strong> frequent renter points</p>";
+
+		return $result;
+	}
+
+	/**
 	 * @return float|int
 	 */
 	public function getTotalCharge()
