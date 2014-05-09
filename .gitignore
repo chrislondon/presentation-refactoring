@@ -3,3 +3,4 @@ composer.lock
 bin/*
 !bin/composer.phar
 !bin/print_statement.php
+!bin/speed_test.php
